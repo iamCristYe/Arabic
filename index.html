@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<title>Arabic Alphabet</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+        sound = ["ā", "b", "t", "thank", "j", "ḥ", "kh", "d", "there", "r", "z", "s", "sh", "ṣ", "ḍ", "ṭ", "ẓ", "‘", "gh", "f", "q", "k", "l", "m", "n", "h", "w", "y"];
+        textstring = "ـا ا ـا ا ـب ـبـ بـ ب ـت ـتـ تـ ت ـث ـثـ ثـ ث ـج ـجـ جـ ج ـح ـحـ حـ ح ـخ ـخـ خـ خ ـد د ـد د ـذ ذ ـذ ذ ـر ر ـر ر ـز ز ـز ز ـس ـسـ سـ س ـش ـشـ شـ ش ـص ـصـ صـ ص ـض ـضـ ضـ ض ـط ـطـ طـ ط ـظ ـظـ ظـ ظ ـع ـعـ عـ ع ـغ ـغـ غـ غ ـف ـفـ فـ ف ـق ـقـ قـ ق ـك ـكـ كـ ك ـل ـلـ لـ ل ـم ـمـ مـ م ـن ـنـ نـ ن ه ـهـ هـ ه ـو و ـو و ـي ـيـ يـ ي"
+        text = textstring.split(" ");
+
+        Number = Math.floor((Math.random() * 28) + 1);
+        Position = Math.floor((Math.random() * 4) + 1);
+
+
+
+        document.getElementById("1").innerHTML = sound[Number - 1];
+        document.getElementById("2").innerHTML = text[Number * 4 + Position - 5];
+    })
+</script>
+
+
+<h5 id="1">
+
+</h5>
+
+<br><br><br><br><br><br>
+
+<h1 id="2">
+
+</h1>
