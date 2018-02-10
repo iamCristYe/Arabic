@@ -7,23 +7,21 @@
         sound = ["ā", "b", "t", "thank", "j", "ḥ", "kh", "d", "there", "r", "z", "s", "sh", "ṣ", "ḍ", "ṭ", "ẓ", "‘", "gh", "f", "q", "k", "l", "m", "n", "h", "w", "y"];
         textstring = "ـا ا ـا ا ـب ـبـ بـ ب ـت ـتـ تـ ت ـث ـثـ ثـ ث ـج ـجـ جـ ج ـح ـحـ حـ ح ـخ ـخـ خـ خ ـد د ـد د ـذ ذ ـذ ذ ـر ر ـر ر ـز ز ـز ز ـس ـسـ سـ س ـش ـشـ شـ ش ـص ـصـ صـ ص ـض ـضـ ضـ ض ـط ـطـ طـ ط ـظ ـظـ ظـ ظ ـع ـعـ عـ ع ـغ ـغـ غـ غ ـف ـفـ فـ ف ـق ـقـ قـ ق ـك ـكـ كـ ك ـل ـلـ لـ ل ـم ـمـ مـ م ـن ـنـ نـ ن ه ـهـ هـ ه ـو و ـو و ـي ـيـ يـ ي"
         text = textstring.split(" ");
-
+        current = 0;
         Number = Math.floor((Math.random() * 28) + 1);
         Position = Math.floor((Math.random() * 4) + 1);
 
 
-
-        document.getElementById("1").innerHTML = sound[Number - 1];
-        document.getElementById("2").innerHTML = text[Number * 4 + Position - 5];
+        setInterval(() => {
+            if (current == 0) {
+                document.getElementsByTagName("h1")[0].innerHTML = text[Number * 4 + Position - 5]; current = 1;
+            } else {
+                document.getElementsByTagName("h1")[0].innerHTML = sound[Number - 1]; current = 0;
+                Number = Math.floor((Math.random() * 28) + 1);
+                Position = Math.floor((Math.random() * 4) + 1);
+            }
+        }, 1000);
     })
 </script>
 
-<h1 id="2">
-
-</h1>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<h5 id="1">
-
-</h5>
+<h1 style="font-size:20vw;text-align:center;"></h1>
